@@ -4,32 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Redirect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Array of URLs
             var urls = [
-                "https://www.israelhayom.co.il/military-life/article/15907779", <!-- אלירן מזרחי ז"ל -->
-                "https://www.izkor.gov.il/%D7%A2%D7%9E%D7%99%D7%AA%20%D7%9E%D7%96%D7%A8%D7%97%D7%99/en_954a56c59cad658e764c1574bbf95f0b", <!-- עמית מזרחי -->
-                "https://www.youtube.com/watch?v=nAUvCdytNhE",<!-- נתיב קוצרו ז"ל -->
-                "https://www.youtube.com/watch?v=65teV-AImT4",<!-- יקיר טייטלבוים ז"ל -->
-                "https://www.youtube.com/watch?v=q5fWgZ6R68o",<!-- יונדב רז לוינשטיין הי"ד -->
-                "https://www.avraham-hankin.com/",<!-- אברהם הנקין ז"ל -->
-                "https://www.ynet.co.il/news/article/hjldpqb2p",<!-- מתן אלמליח ז"ל-->
-                "https://www.israelhayom.co.il/magazine/hashavua/article/15944281",<!-- אילון ויס ז"ל -->
-                "https://www.israelhayom.co.il/news/local/article/14935759",  <!-- ארי יחיאל זנילמן ז"ל -->
+                "https://www.israelhayom.co.il/military-life/article/15907779", // אלירן מזרחי ז"ל
+                "https://www.izkor.gov.il/%D7%A2%D7%9E%D7%99%D7%AA%20%D7%9E%D7%96%D7%A8%D7%97%D7%99/en_954a56c59cad658e764c1574bbf95f0b", // עמית מזרחי
+                "https://www.youtube.com/watch?v=nAUvCdytNhE", // נתיב קוצרו ז"ל
+                "https://www.youtube.com/watch?v=65teV-AImT4", // יקיר טייטלבוים ז"ל
+                "https://www.youtube.com/watch?v=q5fWgZ6R68o", // יונדב רז לוינשטיין הי"ד
+                "https://www.avraham-hankin.com/", // אברהם הנקין ז"ל
+                "https://www.ynet.co.il/news/article/hjldpqb2p", // מתן אלמליח ז"ל
+                "https://www.israelhayom.co.il/magazine/hashavua/article/15944281", // אילון ויס ז"ל
+                "https://www.israelhayom.co.il/news/local/article/14935759", // ארי יחיאל זנילמן ז"ל
             ];
-            
+
             // Function to select a random URL
             function getRandomUrl() {
                 return urls[Math.floor(Math.random() * urls.length)];
             }
-            
-            // Redirect to a random URL
-            window.location.href = getRandomUrl();
+
+            // Event listener for button click
+            document.getElementById('redirectButton').addEventListener('click', function() {
+                window.location.href = getRandomUrl();
+            });
         });
     </script>
 </head>
 <body>
-    <p>Redirecting...</p>
+    <h1>Honor Their Memory</h1>
+    <p>Click the button below to learn more about the heroes who gave everything.</p>
+    <img src="data:image/jpeg;base64,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" alt="Memorial Image">
+    <br>
+    <button id="redirectButton">Go to Random Memorial</button>
 </body>
 </html>
